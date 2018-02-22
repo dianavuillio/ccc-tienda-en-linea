@@ -362,7 +362,8 @@
 <!-- Aqui termina el header -->
 
 
-  // Content hero
+  <!--// Content hero-->
+
   <!-- New Product -->
   	<section class="newproduct bgwhite p-t-45 p-b-105">
   		<div class="container">
@@ -654,7 +655,7 @@
   	</section>
 
 
-  // Termina el content hero
+  <!--// Termina el content hero-->
 
   <!-- Cart -->
   	<section class="cart bgwhite p-t-70 p-b-100">
@@ -665,9 +666,9 @@
   					<table class="table-shopping-cart">
   						<tr class="table-head">
   							<th class="column-1"></th>
-  							<th class="column-2">Product</th>
-  							<th class="column-3">Price</th>
-  							<th class="column-4 p-l-70">Quantity</th>
+  							<th class="column-2">Producto</th>
+  							<th class="column-3">Precio</th>
+  							<th class="column-4 p-l-70">Cantidad</th>
   							<th class="column-5">Total</th>
   						</tr>
 
@@ -826,6 +827,49 @@
 
 
 
-  // Checkout
+  <!--// Checkout-->
+  <!--===============================================================================================-->
+	<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
 </body>
 </html>
